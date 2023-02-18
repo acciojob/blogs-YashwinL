@@ -22,7 +22,7 @@ public class User{
     private String lastname;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Blog> writtenedBlogs = new ArrayList<>();
+    private List<Blog> BlogList = new ArrayList<>();
 
     public User() {
     }
@@ -67,12 +67,12 @@ public class User{
         this.lastname = lastname;
     }
 
-    public List<Blog> getWrittenedBlogs() {
-        return writtenedBlogs;
+    public List<Blog> getBlogList() {
+        return BlogList;
     }
 
-    public void setWrittenedBlogs(List<Blog> writtenedBlogs) {
-        this.writtenedBlogs = writtenedBlogs;
+    public void setBlogList(List<Blog> BlogList) {
+        this.BlogList=BlogList;
     }
 
 
