@@ -27,7 +27,12 @@ public class UserService {
 
     public void deleteUser(int userId){
         //for now lets try just deleting user
-        userRepository3.delete(userRepository3.findById(userId).get());
+
+        User user = userRepository3.findById(userId).get();
+        if(userRepository3.existsById(userId)){
+            userRepository3.delete(user);
+        }
+
     }
 
     public User updateUser(Integer id, String password){
