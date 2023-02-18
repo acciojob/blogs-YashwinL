@@ -28,10 +28,11 @@ public class UserService {
     public void deleteUser(int userId){
         //for now lets try just deleting user
 
-        User user = userRepository3.findById(userId).get();
-        if(user!=null){
-            userRepository3.delete(user);
-        }
+//        User user = userRepository3.findById(userId).get();
+//        if(user!=null){
+//            userRepository3.delete(user);
+//        }
+        userRepository3.deleteById(userId);
 
     }
 
