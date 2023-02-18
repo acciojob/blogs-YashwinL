@@ -29,7 +29,7 @@ public class UserService {
         //for now lets try just deleting user
 
         User user = userRepository3.findById(userId).get();
-        if(userRepository3.existsById(userId)){
+        if(user!=null){
             userRepository3.delete(user);
         }
 
